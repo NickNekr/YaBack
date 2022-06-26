@@ -1,0 +1,13 @@
+version: "1"
+
+volumes:
+  db_vol:
+
+services:
+  web:
+    build: ./
+    restart: always
+    volumes:
+      - db_vol:/yaback/app/db_vol
+    ports:
+      - 80:80
